@@ -35,8 +35,8 @@
 	</div>
 </template>
 <script>
-    import { mapActions } from 'vuex'
-    import { USER_SIGNIN } from 'store/user'
+    import { mapActions } from 'vuex';
+    import { USER_SIGNIN } from 'store/user';
 
     export default {
         data() {

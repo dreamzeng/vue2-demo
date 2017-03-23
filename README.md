@@ -1,16 +1,16 @@
-## 前言
+## 介绍
 ```
-国庆在回家的路上，得知了vue2发布了正式版，
-国庆回来后，在公司内两个项目便直接应用上了vue2，
-一个是PC端的商户后台，一个是微信端商城，
-都是基于Vue2、vue-router、vuex ......
-在开发的过程中，遇到了一系列的问题，
-比如页面后退数据还原，滚动条还原，
-登录超时，获取列表数据，表单提交，
-多台服务器自动化部署，最终后一个个解决了，
-能够平稳的从react切换到vue2开发，vue的文档功不可没。
+架构采用VUE全家桶（Vue2、vue-router、vuex） + webpack + gulp
+实现构建，测试，发布，上传一条龙服务。
+config里index.js是配置服务器路径。
 ```
-github:[https://github.com/lzxb/vue2-demo](https://github.com/lzxb/vue2-demo)
+
+## 命令
+```
+npm run dev  开始开发
+npm run pro  部署到正式
+npm run test 部署到测试
+```
 
 ## 源码说明
 ### 项目目录说明
@@ -101,13 +101,6 @@ vuex                                  // 组件状态管理
 /home                                 // 个人中心，需要登录后才可以访问
 /                                     // 首页，不需要登录可以访问
 *                                     // 强制跳转到登录页面
-```
-
-### 运行程序 
-```
-npm install
-npm run dev
-http://localhost:3000/app/
 ```
 
 ## 开发教程

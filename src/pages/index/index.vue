@@ -16,7 +16,7 @@
 			<router-link slot="right" v-if="user.id" to="/home">{{user.name}}</router-link>
 		</v-header>
 		<div class="login-msg" v-if="!user.id">
-			<router-link to="/login">你还未登录，请先登录</router-link>
+			<router-link to="/login">你还未登录哦，请先登录</router-link>
 		</div>
 		<div class="msg" v-if="user.id">
 			<img width="50" :src="logo" alt=""> <br>

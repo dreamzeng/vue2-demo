@@ -32,7 +32,7 @@ gulp.task('build', function (callback) {
 const ftp = require('gulp-sftp')
 gulp.task('upload', ['build'], function (callback) {
     console.log('## 正在部署到服务器上')
-    var dev = isEnv ? config.devDist : config.devTest
+    var dev = isEnv ? config.buildPro : config.buildTest
     gulp.src('.' + config.publicPath + '**')
         .pipe(ftp(Object.assign(dev, {callback})))
 })
@@ -40,9 +40,11 @@ gulp.task('upload', ['build'], function (callback) {
 /**
  * 上传到测试服务器上
  */
-gulp.task('devTest', ['build', 'upload', 'clean'])
+gulp.task('buildTest', ['build', 'upload', 'clean'])
+// gulp.task('buildTest', ['build'])
 
 /**
  * 上传到生产服务器上
  */
-gulp.task('devDist', ['build', 'upload', 'clean'])
+gulp.task('buildPro', ['build', 'upload', 'clean'])
+// gulp.task('buildPro', ['build'])
